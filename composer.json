@@ -1,5 +1,5 @@
 {
-    "name": "noumecha/hot_models",
+    "name": "habeuk/hot_models",
     "description": "simple module to create drupal site",
     "type": "drupal-module-custom",
     "require": {

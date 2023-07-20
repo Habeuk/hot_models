@@ -7,8 +7,9 @@ use Drupal\formatage_models\FormatageModelsThemes;
 use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
 
 /**
- * 
+ *
  * hot models hot lock footer
+ *
  * @Layout(
  *  id = "hot_models_hotlock_footer",
  *  label = @Translation("hot_models_hotlock_footer"),
@@ -19,10 +20,10 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  *  default_region = "footer_logo",
  *  regions = {
  *      "footer_logo" = {
- *          "label" = @Translation("footer_logo"),     
+ *          "label" = @Translation("footer_logo"),
  *      },
  *      "footer_list_one" = {
- *          "label" = @Translation("footer_list_one"),     
+ *          "label" = @Translation("footer_list_one"),
  *      },
  *      "footer_title_one" = {
  *          "label" = @Translation("footer_title_one"),
@@ -31,34 +32,33 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  *          "label" = @Translation("footer_list_two"),
  *      },
  *      "footer_title_two" = {
- *          "label" = @Translation("footer_title_two"),     
+ *          "label" = @Translation("footer_title_two"),
  *      },
  *      "footer_list_three" = {
- *          "label" = @Translation("footer_list_three"),     
+ *          "label" = @Translation("footer_list_three"),
  *      },
  *      "footer_title_three" = {
- *          "label" = @Translation("footer_title_three"),     
+ *          "label" = @Translation("footer_title_three"),
  *      },
  *      "footer_subtitle" = {
- *          "label" = @Translation("footer_subtitle"),     
+ *          "label" = @Translation("footer_subtitle"),
  *      },
  *      "footer_search" = {
- *          "label" = @Translation("footer_search"),     
+ *          "label" = @Translation("footer_search"),
  *      },
  *      "footer_copyright_links" = {
- *          "label" = @Translation("footer_copyright_links"),     
+ *          "label" = @Translation("footer_copyright_links"),
  *      },
  *      "footer_copyright" = {
- *          "label" = @Translation("footer_copyright"),     
+ *          "label" = @Translation("footer_copyright"),
  *      }
  *  }
  * )
- * 
+ *
  */
-class HotModelsHotlockFooter extends FormatageModelsSection
-{
-
-   /**
+class HotModelsHotlockFooter extends FormatageModelsSection {
+  
+  /**
    *
    * {@inheritdoc}
    * @see \Drupal\formatage_models\Plugin\Layout\FormatageModels::__construct()
@@ -83,35 +83,37 @@ class HotModelsHotlockFooter extends FormatageModelsSection
     
     return $build;
   }
-
+  
   /**
-   * 
+   *
    * {@inheritdoc}
-   * 
+   *
    */
-  public function defaultConfiguration()
-  {
-    return parent::defaultConfiguration() + [
-        'css' => '',
-        'hmhf' => [
-            'builder-form' => true,
-            'info' => [
-                'title' => 'Contenu',
-                'loader' => 'static'
-            ],
-            'fields' => [
-                'footer_logo' => [
-                    'text_html' => [
-                        'label' => 'Logo',
-                        'value' => '<img src="https://hotlock.axiomthemes.com/wp-content/uploads/2017/10/retina-logo-footer-1.png"
+  public function defaultConfiguration() {
+    return [
+      'css' => '',
+      'region_css_footer_title_one' => 'h5',
+      'region_css_footer_title_two' => 'h5',
+      'region_css_footer_title_three' => 'h5',
+      'hmhf' => [
+        'builder-form' => true,
+        'info' => [
+          'title' => 'Contenu',
+          'loader' => 'static'
+        ],
+        'fields' => [
+          'footer_logo' => [
+            'text_html' => [
+              'label' => 'Logo',
+              'value' => '<img src="https://hotlock.axiomthemes.com/wp-content/uploads/2017/10/retina-logo-footer-1.png"
                                     alt=""
                                     width="" height="35">'
-                    ]
-                ],
-                'footer_list_one' => [
-                    'text_html' => [
-                        'label' => 'Liste un',
-                        'value' => '<div class="element">
+            ]
+          ],
+          'footer_list_one' => [
+            'text_html' => [
+              'label' => 'Liste un',
+              'value' => '<div class="element">
                                         <span class="icon">
                                             <i>
                                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img"
@@ -160,18 +162,18 @@ class HotModelsHotlockFooter extends FormatageModelsSection
                                             </div>
                                         </div>
                                     </div>'
-                    ]
-                ],
-                'footer_title_one' => [
-                    'text_html' => [
-                        'label' => 'Titre un',
-                        'value' => '<p>Links</p>'
-                    ]
-                ],
-                'footer_list_two' => [
-                    'text_html' => [
-                        'label' => 'Liste deux',
-                        'value' => '<div class="link">
+            ]
+          ],
+          'footer_title_one' => [
+            'text_html' => [
+              'label' => 'Titre un',
+              'value' => '<p>Links</p>'
+            ]
+          ],
+          'footer_list_two' => [
+            'text_html' => [
+              'label' => 'Liste deux',
+              'value' => '<div class="link">
                                         <a href="" class=" ">About Us</a>
                                     </div>
                                     <div class="link">
@@ -183,18 +185,18 @@ class HotModelsHotlockFooter extends FormatageModelsSection
                                     <div class="link">
                                         <a href="" class=" ">Terms of Use</a>
                                     </div>'
-                    ]
-                ],
-                'footer_title_two' => [
-                    'text_html' => [
-                        'label' => 'Titre deux',
-                        'value' => '<p>Navigation</p>'
-                    ]
-                ],
-                'footer_list_three' => [
-                    'text_html' => [
-                        'label' => 'Liste trois',
-                        'value' => '<div class="link">
+            ]
+          ],
+          'footer_title_two' => [
+            'text_html' => [
+              'label' => 'Titre deux',
+              'value' => '<p>Navigation</p>'
+            ]
+          ],
+          'footer_list_three' => [
+            'text_html' => [
+              'label' => 'Liste trois',
+              'value' => '<div class="link">
                                         <a href="" class=" "></a>
                                     </div>
                                     <div class="link">
@@ -203,42 +205,42 @@ class HotModelsHotlockFooter extends FormatageModelsSection
                                     <div class="link">
                                         <a href="" class=" ">Privacy</a>
                                     </div>'
-                    ]
-                ],
-                'footer_title_three' => [
-                    'text_html' => [
-                        'label' => 'Titre trois',
-                        'value' => '<p>Suscribe</p>'
-                    ]
-                ],
-                'footer_subtitle' => [
-                    'text_html' => [
-                        'label' => 'Sous titre',
-                        'value' => '<p>Enter your email subscribe to our news and updates by email.</p>'
-                    ]
-                ],
-                'footer_search' => [
-                    'text_html' => [
-                        'label' => 'Barre de recherche',
-                        'value' => '<input type="email" class="mail form-control" placeholder="Votre Email" name="" id="">
-                                    <button type="submit" class="send">subscribe</button>'
-                    ]
-                ],
-                'footer_copyright_links' => [
-                    'text_html' => [
-                        'label' => 'Copyright links',
-                        'value' => '<a href="#" class="f-link">WB-universeThemes</a>'
-                    ]
-                ],
-                'footer_copyright' => [
-                    'text_html' => [
-                        'label' => 'Copyright',
-                        'value' => '© 2022. All rights reserved.'
-                    ]
-                ]
             ]
+          ],
+          'footer_title_three' => [
+            'text_html' => [
+              'label' => 'Titre trois',
+              'value' => '<p>Suscribe</p>'
+            ]
+          ],
+          'footer_subtitle' => [
+            'text_html' => [
+              'label' => 'Sous titre',
+              'value' => '<p>Enter your email subscribe to our news and updates by email.</p>'
+            ]
+          ],
+          'footer_search' => [
+            'text_html' => [
+              'label' => 'Barre de recherche',
+              'value' => '<input type="email" class="mail form-control" placeholder="Votre Email" name="" id="">
+                                    <button type="submit" class="send">subscribe</button>'
+            ]
+          ],
+          'footer_copyright_links' => [
+            'text_html' => [
+              'label' => 'Copyright links',
+              'value' => '<a href="#" class="f-link">WB-universeThemes</a>'
+            ]
+          ],
+          'footer_copyright' => [
+            'text_html' => [
+              'label' => 'Copyright',
+              'value' => '© 2022. All rights reserved.'
+            ]
+          ]
         ]
-    ];
+      ]
+    ] + parent::defaultConfiguration();
   }
-
+  
 }
