@@ -55,7 +55,6 @@ class HotModelsHongoCollectionSection extends FormatageModelsSection {
    *
    */
   public function build(array $regions) {
-    
     // TODO Auto-generated method stub
     $build = parent::build($regions);
     FormatageModelsThemes::formatSettingValues($build);
@@ -70,6 +69,7 @@ class HotModelsHongoCollectionSection extends FormatageModelsSection {
   public function defaultConfiguration() {
     return [
       'css' => '',
+      'region_css_hongo_collection_right_full' => 'col-lg-6',
       'config_section' => [
         'type_container' => 'container-fluid',
         'container_class' => ''

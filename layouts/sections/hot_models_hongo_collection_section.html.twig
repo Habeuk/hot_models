@@ -8,13 +8,13 @@
                         {{ content.hongo_collection_left_top }}
                     {% endif %}
                 </div>
-                <div class="row no-gutters">
-                    <div class="col-lg-6">
+                <div class="row no-gutters two-items">
+                    <div class="col-sm-6 col-lg-6 two-items--first">
                         {% if content.hongo_collection_left_bottom %}
                             {{ content.hongo_collection_left_bottom }}
                         {% endif %}
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-sm-6 col-lg-6 two-items--second">
                         {% if content.hongo_collection_small_image %}
                             {{ content.hongo_collection_small_image }}
                         {% endif %}
@@ -22,11 +22,11 @@
                 </div>
                 
             </div>
-            <div class="col-lg-6">
-                {% if content.hongo_collection_right_full %}
-                    {{ content.hongo_collection_right_full|layout_value }}
-                {% endif %}
-            </div>
+            {% if content.hongo_collection_right_full %}
+                <div {{ region_attributes.hongo_collection_right_full.addClass(["items--big","hongo_collection_right_full"]) }}>                
+                        {{ content.hongo_collection_right_full|layout_value }}                
+                </div>
+            {% endif %}
         </div>
     </div>
 </div>
