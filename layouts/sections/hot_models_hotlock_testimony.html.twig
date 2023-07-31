@@ -2,7 +2,7 @@
 <section {{ attributes.addClass('testimony-section-handler') }}>
     <div class="container-fluid p-0">
         <div {{ attributes.addClass(['services-testimony','row'])}}>
-            <div class="col-lg-6 p-0 done d-flex justify-content-around">
+            <div class="col-lg-6 done d-flex justify-content-around">
                 {% if content.testimony_counter_contener %}
                 <div class="layout-region testimony_counter_contener all-single-services row">
                     {% for item in content.testimony_counter_contener|array_elements(region_attributes.testimony_counter_contener) %}
