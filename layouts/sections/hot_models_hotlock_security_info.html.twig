@@ -23,13 +23,10 @@
                 {{content.security_text|layout_value}}
             </div>
             {% endif %}
-            {% if content.security_btn %}
+            {% if content.security_btn|has_value %}
                 {% for item in content.security_btn|array_elements(region_attributes.security_btn.addClass('htl-btn htl-btn--bg')) %}
                     {{ item }}
                 {% endfor %}
-                {#<div {{region_attributes.security_btn.addClass('htl-btn htl-btn--bg')}}>
-                    {{ content.security_btn|layout_value }}
-                </div>#}
             {% endif %}
         </div>
 	</div>
