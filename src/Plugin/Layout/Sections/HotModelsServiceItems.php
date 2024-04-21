@@ -61,7 +61,7 @@ class HotModelsServiceItems extends FormatageModelsSection {
    */
   public function defaultConfiguration() {
     return [
-      'css' => 'no-gutters row',
+      'css' => 'g-0 row',
       'region_css_description' => ' col-md-4 col-sm-6 col-xl-2 ',
       'hmls' => [
         'builder-form' => true,
