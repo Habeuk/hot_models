@@ -87,7 +87,7 @@ class HotModelsHotlockHero extends FormatageModelsSection {
   public function defaultConfiguration() {
     return [
       'css' => '',
-      'css_descp' => 'justify-content-end width-tablet ml-auto mr-md-3 align-items-center justify-content-center',
+      'css_descp' => 'justify-content-end width-tablet ms-auto mr-md-3 align-items-center justify-content-center',
       'region_css_call_to_action' => 'htl-btn htl-btn--big htl-btn--fade',
       'region_css_title' => 'wbu-titre-suppra',
       'region_tag_title' => 'h2',

@@ -83,7 +83,7 @@ class HotModelsHotlockMenu extends FormatageModelsSection {
         $hot_nav[$k]['#attributes'] = [
           'class' => [
             'navbar-nav',
-            'ml-auto',
+            'ms-auto',
             'first-nav',
             $build['#settings']['bloc_style']
           ]
@@ -100,7 +100,7 @@ class HotModelsHotlockMenu extends FormatageModelsSection {
         $hot_nav[$k]['#attributes'] = [
           'class' => [
             'navbar-nav',
-            'ml-auto',
+            'ms-auto',
             'first-nav',
             $build['#settings']['bloc_style']
           ]

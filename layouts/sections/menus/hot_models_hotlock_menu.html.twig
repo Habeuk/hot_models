@@ -1,46 +1,47 @@
 {% if content %}
-<header {{ attributes.addClass('header-section-handler')}}>
-  <nav class="navbar navbar-expand-lg header-nav first-nav {{ settings.bloc_style }}">
-    {% if content.menu_logo %}
-    <div {{ region_attributes.menu_logo.addClass('navbar-brand')}} href="#">
-      {{ content.menu_logo }}
-    </div>
-    {% endif %}
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse nav-links " id="navbarSupportedContent">
-      {% if content.menu_list.layout_builder_add_block %}
-      	{{ content.menu_list }}
-      {% else %}
-        <ul {{ region_attributes.menu_list.addClass(['navbar-nav','ml-auto'])}}>
-              {{ content.menu_list|layout_value }}
-        </ul>
-      {% endif %}      
-      <div class="header_search_1 d-flex ml-md-4 align-items-center py-3 pr-5">
-        	{% if logged_in == true %}    	
-        	<div class="btn-group">
-            	<a href="#" type="button" class="mr-4 dropdown-toggle" title="{{'Profile information'|trans}}" data-toggle="dropdown" aria-expanded="false">
-            		<i class="fas fa-user"></i>
-            	</a>
-            	<div class="dropdown-menu dropdown-menu--user">
-                    {{content.user_compact}}
-              </div>
-        	</div>    		
-        	{% else %}
-        	<a href="/user/login" title="{{'Login'|trans}}" class="mr-4">
-        		<i class="fas fa-sign-in-alt"></i>
-        		{{ 'Login'|trans }}
-        	</a>
-        	{% endif %}
-    </div>
-      {% if content.menu_button %}
-      <div {{ region_attributes.menu_button.addClass()}}>
-        {{ content.menu_button }}
-      </div>
-      {% endif %}
-    </div>
-  </nav>
-</header>
+	<header {{ attributes.addClass('header-section-handler')}}>
+		<div {% if settings.config_section %} class="{{ settings.config_section.type_container }} {{ settings.config_section.container_class }}" {% else %} class="" {% endif %}>
+			<nav class="navbar navbar-expand-lg header-nav first-nav {{ settings.bloc_style }}">
+				{% if content.menu_logo %}
+					<div {{ region_attributes.menu_logo.addClass('navbar-brand')}} href="#">
+						{{ content.menu_logo }}
+					</div>
+				{% endif %}
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse nav-links " id="navbarSupportedContent">
+					{% if content.menu_list.layout_builder_add_block %}
+						{{ content.menu_list }}
+					{% else %}
+						<ul {{ region_attributes.menu_list.addClass(['navbar-nav','ms-auto'])}}>
+							{{ content.menu_list|layout_value }}
+						</ul>
+					{% endif %}
+					<div class="header_search_1 d-flex ml-md-4 align-items-center py-3 ps-5">
+						{% if logged_in == true %}
+							<div class="btn-group">
+								<a href="#" type="button" class="me-4 dropdown-toggle" title="{{'Profile information'|trans}}" data-toggle="dropdown" aria-expanded="false">
+									<i class="fas fa-user"></i>
+								</a>
+								<div class="dropdown-menu dropdown-menu--user">
+									{{content.user_compact}}
+								</div>
+							</div>
+						{% else %}
+							<a href="/user/login" title="{{'Login'|trans}}" class="me-4">
+								<i class="fas fa-sign-in-alt"></i>
+								{{ 'Login'|trans }}
+							</a>
+						{% endif %}
+					</div>
+					{% if content.menu_button %}
+						<div {{ region_attributes.menu_button.addClass()}}>
+							{{ content.menu_button }}
+						</div>
+					{% endif %}
+				</div>
+			</nav>
+		</div>
+	</header>
 {% endif %}
