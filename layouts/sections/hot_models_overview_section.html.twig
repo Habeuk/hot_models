@@ -1,37 +1,39 @@
 {% if content %}
 	<section {{ attributes.addClass('services-overview-section-handler')}}>
-		<div class="row g-0 align-center justify-content-between">
-			<div class="col-lg-5 service-description ">
-				{% if content.subtitle_OS %}
-					<div {{ region_attributes.subtitle_OS.addClass('head-title')}}>
-						{{ content.subtitle_OS }}
-					</div>
-				{% endif %}
-				{% if content.title_OS %}
-					<div {{ region_attributes.title_OS.addClass('subtitle')}}>
-						{{ content.title_OS }}
-					</div>
-				{% endif %}
-				{% if content.text_OS %}
-					<div {{ region_attributes.text_OS.addClass('description')}}>
-						{{ content.text_OS|layout_value }}
-					</div>
-				{% endif %}
-				{% if content.button_OS %}
-					<div {{ region_attributes.button_OS.addClass('htl-btn htl-btn--sm htl-btn--bg-inv')}}>
-						{{ content.button_OS|layout_value }}
-					</div>
-				{% endif %}
-			</div>
-			<div class="col-lg-7 services-elements ">
-				{% if content.services_OS  %}
-					<div class="layout-region services_OS row g-0">
-						{% for item in content.services_OS|array_elements(region_attributes.services_OS.addClass('')) %}
-							{{ item }}
-						{% endfor %}
-					</div>
-				{% endif %}
-			</div>
+		<div {% if settings.config_section %} class="{{ settings.config_section.type_container }} {{ settings.config_section.container_class }}" {% else %} class="" {% endif %}>
+    		<div class="row g-0 align-center justify-content-between">
+    			<div class="col-lg-5 service-description ">
+    				{% if content.subtitle_OS %}
+    					<div {{ region_attributes.subtitle_OS.addClass('head-title')}}>
+    						{{ content.subtitle_OS }}
+    					</div>
+    				{% endif %}
+    				{% if content.title_OS %}
+    					<div {{ region_attributes.title_OS.addClass('subtitle')}}>
+    						{{ content.title_OS }}
+    					</div>
+    				{% endif %}
+    				{% if content.text_OS %}
+    					<div {{ region_attributes.text_OS.addClass('description')}}>
+    						{{ content.text_OS|layout_value }}
+    					</div>
+    				{% endif %}
+    				{% if content.button_OS %}
+    					<div {{ region_attributes.button_OS.addClass('htl-btn htl-btn--sm htl-btn--bg-inv')}}>
+    						{{ content.button_OS|layout_value }}
+    					</div>
+    				{% endif %}
+    			</div>
+    			<div class="col-lg-7 services-elements ">
+    				{% if content.services_OS  %}
+    					<div class="layout-region services_OS row g-0">
+    						{% for item in content.services_OS|array_elements(region_attributes.services_OS.addClass('')) %}
+    							{{ item }}
+    						{% endfor %}
+    					</div>
+    				{% endif %}
+    			</div>
+    		</div>
 		</div>
 	</section>
 {% endif %}
