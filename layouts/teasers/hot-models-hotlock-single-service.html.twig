@@ -22,15 +22,15 @@
 			{% if content.description %}
 				<div {{ region_attributes.description.addClass(['description','descriptor-item'])}}>
 					{% if content.description.layout_builder_add_block %} 
-						 {{content.description}}
+						 {{content.description|raw}}
 					{% else %}
 						{% set content_desc %}
 						{{ content.description|layout_value }}
 						{% endset %}
 						{% set content_desc2 %}
-						{{content_desc|trim|striptags }}
+						{{content_desc|trim|striptags|raw }}
 						{% endset %}
-						{{ (content_desc2|length > 150 ? content_desc2|slice(0, 150) ~ '…' : content_desc2)  }}
+						{{ (content_desc2|length > 150 ? content_desc2|slice(0, 150) ~ '…' : content_desc2)|raw }}
 					{% endif %}
 				</div>
 			{% endif %}
